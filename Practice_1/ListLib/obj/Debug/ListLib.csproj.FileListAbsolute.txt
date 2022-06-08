@@ -1,0 +1,6 @@
+D:\НАУ\НАУ\Практика\Practice_1\ListLib\bin\Debug\ListLib.dll
+D:\НАУ\НАУ\Практика\Practice_1\ListLib\bin\Debug\ListLib.pdb
+D:\НАУ\НАУ\Практика\Practice_1\ListLib\obj\Debug\ListLib.csproj.AssemblyReference.cache
+D:\НАУ\НАУ\Практика\Practice_1\ListLib\obj\Debug\ListLib.csproj.CoreCompileInputs.cache
+D:\НАУ\НАУ\Практика\Practice_1\ListLib\obj\Debug\ListLib.dll
+D:\НАУ\НАУ\Практика\Practice_1\ListLib\obj\Debug\ListLib.pdb

@@ -1,0 +1,11 @@
+D:\НАУ\НАУ\Практика\Practice_1\Practice_1\bin\Debug\Practice_1.exe.config
+D:\НАУ\НАУ\Практика\Practice_1\Practice_1\bin\Debug\Practice_1.exe
+D:\НАУ\НАУ\Практика\Practice_1\Practice_1\bin\Debug\Practice_1.pdb
+D:\НАУ\НАУ\Практика\Practice_1\Practice_1\bin\Debug\ListLib.dll
+D:\НАУ\НАУ\Практика\Practice_1\Practice_1\bin\Debug\ListLib.pdb
+D:\НАУ\НАУ\Практика\Practice_1\Practice_1\obj\Debug\Practice_1.csproj.AssemblyReference.cache
+D:\НАУ\НАУ\Практика\Practice_1\Practice_1\obj\Debug\Practice_1.csproj.SuggestedBindingRedirects.cache
+D:\НАУ\НАУ\Практика\Practice_1\Practice_1\obj\Debug\Practice_1.csproj.CoreCompileInputs.cache
+D:\НАУ\НАУ\Практика\Practice_1\Practice_1\obj\Debug\Practice_1.csproj.CopyComplete
+D:\НАУ\НАУ\Практика\Practice_1\Practice_1\obj\Debug\Practice_1.exe
+D:\НАУ\НАУ\Практика\Practice_1\Practice_1\obj\Debug\Practice_1.pdb
