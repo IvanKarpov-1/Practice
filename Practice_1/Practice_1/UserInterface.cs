@@ -10,6 +10,7 @@ namespace Practice_1
         {
             // Перший вивід всіх можливих команд.
             CommandsHandler.CommandHelp();
+            Console.WriteLine();
             string input;
 
             while (true)
@@ -52,10 +53,12 @@ namespace Practice_1
                 {
                     Console.Clear();
                     CommandsHandler.CommandRemoveLast(ref students);
+                    Console.WriteLine();
                     continue;
                 }
                 if (input == "/search")
                 {
+                    Console.Clear();
                     CommandsHandler.CommandSearch(ref students);
                     Console.WriteLine();
                     continue;

@@ -200,7 +200,7 @@ namespace ListLib
         }
 
         // Метод пошуку студентів відмінників що займаються спортом.
-        public T SearchOfElement()
+        public DoublyLinkedList<T> SearchOfElement()
         {
             // Перевірка чи не порожній список.
             if (ListEmpty)
@@ -213,22 +213,21 @@ namespace ListLib
             if (this[0] is Student)
             {
                 DoublyNode<T> current = head;
-                DoublyNode<T> temp = new DoublyNode<T>();
+                var searchResult = new DoublyLinkedList<T>();
 
                 while (current != null)
                 {
-                    if ((current.Data as Student).Gpa > 90 && (current.Data as Student).Sport == true)
+                    if ((current.Data as Student).Gpa >= 90 && (current.Data as Student).Sport == true)
                     {
-                        temp = current;
-                        break;
+                        searchResult.AddFirst(current.Data);
                     }
                     current = current.Next;
                 }
                 
-                // Повертає значення студента, якщо був збіг, інакше: "Елемент не знайдено!".
-                if (temp.Data != null)
+                // Повертає значення студентів, якщо був збіг, інакше: "Елемент не знайдено!".
+                if (searchResult != null)
                 {
-                    return temp.Data;
+                    return searchResult;
                 }
                 else
                 {

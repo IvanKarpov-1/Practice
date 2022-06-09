@@ -1,4 +1,6 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using System.Collections;
+using System;
 using ListLib;
 
 namespace Practice_1
@@ -17,7 +19,7 @@ namespace Practice_1
             Console.WriteLine(" /removelast\t- видалити елемент з кінця списку.");
             Console.WriteLine(" /search\t- знайти у списку студентів відмінників, що займаються спортом.");
             Console.WriteLine(" /show\t\t- вивести список.");
-            Console.WriteLine(" /sort\t\t- сортувати список за середнім балом.\n");
+            Console.WriteLine(" /sort\t\t- сортувати список за середнім балом.");
         }
 
         // Команда для додавання елемента в початок списку.
@@ -141,8 +143,9 @@ namespace Practice_1
         {
             try
             {
-                Student student = students.SearchOfElement();
-                Console.WriteLine(" |  {0,8}  |  {1,12}  |  {2,5}  |", student.Name, student.Gpa, student.Sport);
+                DoublyLinkedList<Student> searchResult = students.SearchOfElement();
+                Console.WriteLine(" Результати пошуку:");
+                CommandShow(ref searchResult);
             }
             catch (Exception exception)
             {
