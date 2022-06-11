@@ -15,15 +15,13 @@ public class UserInterface
         CommandsHandler.commandHelp();
         System.out.println();
 
-        while (true)
-        {
+        while (true) {
             /* Очікування введення команди. */
             System.out.print(" ");
             input = in.nextLine();
 
             /* Перевірка на співпадіння з можливими командами. */
-            if (input.equals("/addfirst"))
-            {
+            if (input.equals("/addfirst")) {
                 System.out.print("\r");
                 CommandsHandler.commandAddFirst(students);
                 System.out.println();
@@ -33,48 +31,40 @@ public class UserInterface
                 new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
                 continue;
             }
-            if (input.equals("/end"))
-            {
+            if (input.equals("/end")) {
                 break;
             }
-            if (input.equals("/help"))
-            {
+            if (input.equals("/help")) {
                 CommandsHandler.commandHelp();
                 System.out.println();
                 continue;
             }
-            if (input.equals("/length"))
-            {
+            if (input.equals("/length")) {
                 CommandsHandler.commandLength(students);
                 System.out.println();
                 continue;
             }
-            if (input.equals("/removelast"))
-            {
+            if (input.equals("/removelast")) {
                 CommandsHandler.commandRemoveLast(students);
                 System.out.println();
                 continue;
             }
-            if (input.equals("/search"))
-            {
+            if (input.equals("/search")) {
                 CommandsHandler.commandSearch(students);
                 System.out.println();
                 continue;
             }
-            if (input.equals("/show"))
-            {
+            if (input.equals("/show")) {
                 CommandsHandler.commandShow(students);
                 System.out.println();
                 continue;
             }
-            if (input.equals("/showback"))
-            {
+            if (input.equals("/showback")) {
                 CommandsHandler.commandShowBack(students);
                 System.out.println();
                 continue;
             }
-            if (input.equals("/sort"))
-            {
+            if (input.equals("/sort")) {
                 CommandsHandler.commandSort(students);
                 System.out.println();
                 continue;
