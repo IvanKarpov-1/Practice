@@ -82,6 +82,7 @@ namespace Practice_1
                 Console.Clear();
                 Console.WriteLine(" Команда ввведена невірно. Спробуйте ще раз.");
                 CommandsHandler.CommandHelp();
+                Console.WriteLine();
             }
         }
     }

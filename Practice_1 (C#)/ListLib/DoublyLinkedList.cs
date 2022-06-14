@@ -7,51 +7,51 @@ namespace ListLib
     // Клас, що реалізує двоспрямований список.
     public class DoublyLinkedList<T> : IEnumerable<T>
     {
-        private DoublyNode<T> head; // Початок списку.
-        private DoublyNode<T> tail; // Кінець списку.
-        private int count = 0;      // Кількість елементів в списку.
+        private DoublyNode<T> _head; // Початок списку.
+        private DoublyNode<T> _tail; // Кінець списку.
+        private int _count = 0;      // Кількість елементів в списку.
 
         // Додавання елемента в початок списку.
         public void AddFirst(T data)
         {
             DoublyNode<T> node = new DoublyNode<T>(data);
-            DoublyNode<T> temp = head;
+            DoublyNode<T> temp = _head;
 
             node.Next = temp;
-            head = node;
+            _head = node;
 
             if (ListEmpty)
             {
-                tail = head;
+                _tail = _head;
             }
             else
             {
                 temp.Previous = node;
             }
 
-            count++;
+            _count++;
         }
 
         // Видалення елемента з кінця списку.
         public void RemoveLast()
         {
-            DoublyNode<T> last = tail;
+            DoublyNode<T> last = _tail;
 
             if (ListEmpty)
             {
                 throw new Exception("Список порожній.");
             }
-            else if (count == 1)
+            else if (_count == 1)
             {
-                head = null;
-                tail = null;
-                count = 0;
+                _head = null;
+                _tail = null;
+                _count = 0;
             }
             else
             {
-                tail = last.Previous;
-                tail.Next = null;
-                --count;
+                _tail = last.Previous;
+                _tail.Next = null;
+                --_count;
             }
         }
 
@@ -61,13 +61,13 @@ namespace ListLib
             get
             {
                 // Перевірка, чи не виходе заданий індекс за допустимі межі.
-                if (index < 0 || index > count)
+                if (index < 0 || index > _count)
                 {
                     throw new IndexOutOfRangeException("Індекс поза межами діапазону!");
                 }
 
                 // Отримання значення елементу за індексом.
-                DoublyNode<T> current = head;
+                DoublyNode<T> current = _head;
                 for (int i = 0; i < index; i++)
                 {
                     current = current.Next;
@@ -77,7 +77,7 @@ namespace ListLib
             set
             {
                 // Перевірка, чи не виходе заданий індекс за допустимі межі.
-                if (index < 0 || index > count)
+                if (index < 0 || index > _count)
                 {
                     throw new IndexOutOfRangeException("Індекс поза межами діапазону!");
                 }
@@ -89,7 +89,7 @@ namespace ListLib
                 // Додавання елемента по індексу.
                 else
                 {
-                    DoublyNode<T> current = head;
+                    DoublyNode<T> current = _head;
                     for (int i = 0; i < index; i++)
                     {
                         current = current.Next;
@@ -100,10 +100,10 @@ namespace ListLib
         }
 
         // Властивість довжини списку.
-        public int Count { get => count; }
+        public int Count { get => _count; }
 
         // Перевірка на порожність списку.
-        public bool ListEmpty => count == 0;
+        public bool ListEmpty => _count == 0;
 
         // Метод ітерації списку.
         IEnumerator IEnumerable.GetEnumerator()
@@ -114,7 +114,7 @@ namespace ListLib
         // Метод ітерації списку для наступного елемента.
         IEnumerator<T> IEnumerable<T>.GetEnumerator()
         {
-            DoublyNode<T> current = head;
+            DoublyNode<T> current = _head;
             while (current != null)
             {
                 yield return current.Data;
@@ -125,7 +125,7 @@ namespace ListLib
         // Метод ітерації списку в зворотньому порядку.
         public IEnumerable<T> BackEnumerator()
         {
-            DoublyNode<T> current = tail;
+            DoublyNode<T> current = _tail;
             while (current != null)
             {
                 yield return current.Data;
@@ -154,7 +154,7 @@ namespace ListLib
             if (this[0] is Student)
             {
                 int left = 0;
-                int right = count - 1;
+                int right = _count - 1;
 
                 // Сортування.
                 while (left < right)
@@ -193,7 +193,7 @@ namespace ListLib
             // а також повернеться стандатне значення для T.
             if (this[0] is Student)
             {
-                DoublyNode<T> current = head;
+                DoublyNode<T> current = _head;
                 var searchResult = new DoublyLinkedList<T>();
 
                 while (current != null)
